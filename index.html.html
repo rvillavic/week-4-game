@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+window.onload = init;
+
+//var computerChoice = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+var computerChoice = Math.floor(Math.random() * 12) + 1;
+var crystalVal1 = Math.floor(Math.random() * 12) + 1; 
+var crystalVal2 = Math.floor(Math.random() * 12) + 1;
+var crystalVal3 = Math.floor(Math.random() * 12) + 1;
+var crystalVal4 = Math.floor(Math.random() * 12) + 1; 
+
+var playerScore = 0;
+var wins = 0;
+var losses = 0;
+
+function init() {
+	
+  document.getElementById("mydemo1").onclick = calculate1;
+  document.getElementById("mydemo2").onclick = calculate2;
+  document.getElementById("mydemo3").onclick = calculate3;
+  document.getElementById("mydemo4").onclick = calculate4;
+
+  gameScores();
+
+      /*  var html = "<p>Computer Choice: " + 
+        computerChoice + 
+        "</p>" +
+        "<p>Player Score: " + 
+        playerScore + 
+        "</p>" +
+        "<p>Wins: " + 
+        wins + 
+        "</p>" +
+        "<p>Losses: " +
+        losses + 
+        "</p>";
+   
+   document.querySelector('#game').innerHTML = html;*/
+     
+}
+ 
+function gameScores() {
+    html = "<p>Computer Choice: " + computerChoice + "</p>" +
+        "<p>Player Score: " + playerScore + "</p>" +
+        "<p>Wins: " + wins + "</p>" +
+        "<p>Losses: " + losses + "</p>";
+   
+	document.querySelector('#game').innerHTML = html;
+}
+function calculate1() { 
+
+  playerScore += crystalVal1;
+
+  if (playerScore < computerChoice){
+  		confirm(""+ crystalVal1  +" space "+ playerScore);
+  		gameScores();
+	}
+	else if (playerScore == computerChoice)
+	{
+		confirm("You win!!! "+ crystalVal1  +" space "+ playerScore);
+		wins ++;
+		gameScores();
+		init();
+
+	}
+	else
+	{
+		confirm("You lose!!! "+ crystalVal1  +" space "+ playerScore);
+		losses ++;
+		computerChoice = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
+
+		crystalVal1 = Math.floor(Math.random() * 12) + 1; 
+		crystalVal2 = Math.floor(Math.random() * 12) + 1;
+		crystalVal3 = Math.floor(Math.random() * 12) + 1;
+		crystalVal4 = Math.floor(Math.random() * 12) + 1; 
+
+		playerScore = 0;
+		//wins = 0;
+		losses = 0;
+		init();
+
+	}
+}
+function calculate2() {
+ 
+  playerScore += crystalVal2;
+
+  if (playerScore < computerChoice){
+  		confirm(""+ crystalVal2 +" space "+ playerScore);
+  		gameScores();
+	}
+	else if (playerScore == computerChoice)
+	{
+		confirm("You win!!! "+ crystalVal2  +" space "+ playerScore);
+		wins ++;
+		gameScores();
+		init();
+
+	}
+	else
+	{
+		confirm("You lose!!! "+ crystalVal2  +" space "+ playerScore);
+		losses ++;
+		computerChoice = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
+
+		crystalVal1 = Math.floor(Math.random() * 12) + 1; 
+		crystalVal2 = Math.floor(Math.random() * 12) + 1;
+		crystalVal3 = Math.floor(Math.random() * 12) + 1;
+		crystalVal4 = Math.floor(Math.random() * 12) + 1; 
+
+		playerScore = 0;
+		//wins = 0;
+		losses = 0;
+		init();
+
+	}
+}
+function calculate3() {
+
+  playerScore += crystalVal3;
+
+  if (playerScore < computerChoice){
+  		confirm(""+ crystalVal3  +" space "+ playerScore);
+  		gameScores();
+	}
+	else if (playerScore == computerChoice)
+	{
+		confirm("You win!!! "+ crystalVal3  +" space "+ playerScore);
+		wins ++;
+		gameScores();
+		init();
+
+	}
+	else
+	{
+		confirm("You lose!!! "+ crystalVal3  +" space "+ playerScore);
+		losses ++;
+		computerChoice = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
+
+		crystalVal1 = Math.floor(Math.random() * 12) + 1; 
+		crystalVal2 = Math.floor(Math.random() * 12) + 1;
+		crystalVal3 = Math.floor(Math.random() * 12) + 1;
+		crystalVal4 = Math.floor(Math.random() * 12) + 1; 
+
+		playerScore = 0;
+		//wins = 0;
+		losses = 0;
+		init();
+
+	}
+}
+function calculate4() {
+	
+  playerScore += crystalVal4;
+
+  if (playerScore < computerChoice){
+  		confirm(""+ crystalVal4  +" space "+ playerScore);
+  		gameScores();
+	}
+	else if (playerScore == computerChoice)
+	{
+		confirm("You win!!! "+ crystalVal4  +" space "+ playerScore);
+		wins ++;
+		gameScores();
+		init();
+
+	}
+	else
+	{
+		confirm("You lose!!! "+ crystalVal4  +" space "+ playerScore);
+		losses ++;
+		computerChoice = Math.floor(Math.random() * (120 - 19 + 1)) + 19; 
+
+		crystalVal1 = Math.floor(Math.random() * 12) + 1; 
+		crystalVal2 = Math.floor(Math.random() * 12) + 1;
+		crystalVal3 = Math.floor(Math.random() * 12) + 1;
+		crystalVal4 = Math.floor(Math.random() * 12) + 1; 
+
+		playerScore = 0;
+		//wins = 0;
+		losses = 0;
+		init();
+
+	}
+}
+</script>
+<h1>The Crystal Game</h1>
+
+<button id="mydemo1" type="button">Crystal 1<img src="http://vignette4.wikia.nocookie.net/mgefanon/images/6/69/Kinetic_Crystal.jpg/revision/latest?cb=20150409231719" alt="Smiley face" width="42" height="42"></button>
+<button id="mydemo2" type="button">Crystal 2<img src="http://marvelbitvachempionov.ru/wp-content/uploads/crystal_alliance.png" alt="Smiley face" width="42" height="42"></button>
+<button id="mydemo3" type="button">Crystal 3<img src="http://vignette3.wikia.nocookie.net/marvel-contestofchampions/images/1/1c/2-Star_Crystal.png/revision/latest?cb=20150825213642" alt="Smiley face" width="42" height="42"></button>
+<button id="mydemo4" type="button">Crystal 4<img src="http://www.theprojectors.co.uk/img/p/89-116-large.jpg" alt="Smiley face" width="42" height="42"></button>
+
+<div id="game">
+    <p>The Crystal Game</p>
+</div>
+</body>
+</html>
